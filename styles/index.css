@@ -1,8 +1,5 @@
 @media (max-width: 1300px) {
-  section {
-    width: 80vw !important;
-  }
-  .card img {
+  section, .card {
     width: 80vw !important;
   }
   #contato {
@@ -10,6 +7,10 @@
   }
 }
 html, body {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   margin: 0;
   padding: 0;
   border: none;
@@ -34,10 +35,13 @@ header {
 }
 
 main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
   width: 90vw;
   height: 90vh;
-  flex-direction: column;
-  justify-content: space-around !important;
+  text-align: center;
 }
 
 section {
@@ -89,17 +93,11 @@ a {
   color: #76ABAE;
 }
 
-.flexbox {
+.voltar-ao-sumario {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-}
-
-.center {
-  text-align: center;
-}
-
-.voltar-ao-sumario {
   background-color: #76ABAE;
   border-radius: 10px;
   width: 50px;
