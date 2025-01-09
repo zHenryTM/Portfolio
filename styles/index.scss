@@ -2,8 +2,18 @@
 @import "mediaqueries";
 
 
+@mixin flexbox ($direction: row, $justify-content: center, $align-items: center)
+{   
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify-content;
+    align-items: $align-items;
+}
+
+
 html, body
 {
+    @include flexbox;
     margin: 0;
     padding: 0;
     border: none;
@@ -36,10 +46,10 @@ header
 
 main
 {
+    @include flexbox($direction: column, $justify-content: space-around);
     width: 90vw;
     height: 90vh;
-    flex-direction: column;
-    justify-content: space-around!important;
+    text-align: center;
 }
 
 
@@ -119,22 +129,9 @@ a
 }
 
 
-.flexbox
-{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.center
-{
-    text-align: center;
-}
-
-
 .voltar-ao-sumario
 {
+    @include flexbox;
     background-color: $ciano;
     border-radius: 10px;
     width: 50px;
